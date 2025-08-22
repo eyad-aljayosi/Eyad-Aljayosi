@@ -1,0 +1,205 @@
+body {
+    background: linear-gradient(135deg, #a0c4ff, #c9d6ff);
+    background: url('../img/Background-verification.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Tajawal', 'Cairo', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #333;
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    animation: moveCircles 10s infinite;
+}
+
+.circle1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 15%;
+    animation-duration: 12s;
+}
+
+.circle2 {
+    width: 150px;
+    height: 150px;
+    top: 30%;
+    right: 20%;
+    animation-duration: 8s;
+}
+
+.circle3 {
+    width: 100px;
+    height: 100px;
+    bottom: 15%;
+    left: 10%;
+    animation-duration: 10s;
+}
+
+@keyframes moveCircles {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px) rotate(45deg); }
+    100% { transform: translateY(0); }
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+form {
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 34px;
+    margin-top: 2px;
+    color: #005b96;
+    font-weight: bold;
+    position: relative;
+}
+
+input[type="text"] {
+    padding: 15px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    color: #333;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #0073e6;
+    box-shadow: 0 0 8px rgba(0, 115, 230, 0.6);
+    transform: translateY(-3px);
+}
+
+.form-btn {
+    background: linear-gradient(to right, #2980b9, #3498db);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    width: 100%;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-btn:hover {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.error {
+    color: #ff4d4d;
+    background-color: #ffd1d1;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+    display: none;
+}
+
+.error.show {
+    display: block;
+}
+
+#timer {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+#expiry-text {
+    font-size: 20px;
+    color: #3498db;
+    margin-top: 10px;
+    direction: rtl;
+}
+
+.back-button {
+    position: absolute;
+    top: 15px;
+    left: 67px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 10; /* أضفنا هذا لتكون فوق الفورم */
+
+}
+
+.back-button i {
+    color: #2980b9;
+    font-size: 22px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+}
+
+.back-button:hover i {
+    transform: translateX(-2px);
+}
+
+.back-button::after {
+    content: "الرجوع إلى الصفحة السابقة ";
+    position: absolute;
+    top: 48%;
+    right: 78%;
+    transform: translateY(-50%);
+    background: #f9f9f9;
+    color: black;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.back-button:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(-10px);
+}

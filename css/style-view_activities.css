@@ -1,0 +1,186 @@
+body {
+    font-family: 'Tajawal', 'Cairo', sans-serif; /* خط عربي أنيق */
+background-color: #f4f7fa; /* خلفية فاتحة ونقية */
+background-image: linear-gradient(135deg, #ffffff 25%, #e2eafc 100%); /* تدرج خفيف جدا */
+background-attachment: fixed;
+margin: 0;
+padding: 0;
+color: #333;
+
+background-image: url('../img/background6.jpg');
+background-size: cover; 
+background-position: center center; 
+background-attachment: fixed;
+
+}
+
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.legend div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.color-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    display: inline-block;
+}
+table {
+width: 80%; /* تحديد العرض إلى 50% */
+margin: 0 auto; /* تمركز الجدول أفقياً */
+border-collapse: collapse;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #333;
+    color: white;
+}
+td a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.timestamp {
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 14px;
+    transition: all 0.3s;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+}
+
+.operation-icon {
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.no-activities {
+background-color: rgb(7 69 133);
+color: white;
+padding: 20px 35px; /* زيادة الحشو العلوي والسفلي، وتقليل الحشو الجانبي */
+text-align: center;
+border-radius: 14px; /* حواف دائرية أكبر لإضفاء لمسة من النعومة */
+margin-top: 30px;
+font-size: 30px; /* ضبط حجم الخط ليكون مناسباً */
+font-weight: 500; /* جعل الخط أقوى قليلاً */
+max-width: 500px; /* الحد الأقصى للعرض مع تقليل الحجم */
+margin-left: auto; /* تمركز العنصر أفقياً */
+margin-right: auto; /* تمركز العنصر أفقياً */
+box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.12); /* تحسين الظل لإعطاء عمق أفضل */
+border: 1px solid rgb(33, 58, 159); /* حدود رقيقة ولكن واضحة */
+font-family: 'Tajawal', Arial, sans-serif; /* الخط العربي المميز */
+transition: all 0.3s ease-in-out; /* إضافة تأثير انسيابي */
+}
+
+
+.text-container {
+display: inline-block;
+max-width: 250px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+position: relative;
+direction: ltr; /* ضبط الاتجاه لعدم قص النص من اليسار */
+}
+
+.text-container .full-text {
+display: none;
+white-space: normal;
+word-wrap: break-word;
+}
+
+.text-container.expanded {
+white-space: normal;
+overflow: visible;
+}
+
+.text-container.expanded .full-text {
+display: inline;
+}
+
+.text-container.expanded .short-text {
+display: none;
+}
+
+.toggle-btn {
+background: none;
+border: none;
+color: #333333; /* لون أزرق احترافي */
+cursor: pointer;
+font-size: 13px;
+font-weight: bold;
+text-decoration: none;
+transition: all 0.3s ease-in-out;
+display: block;
+border-radius: 5px;
+position: relative;
+}
+
+/* تأثير الزر عند المرور عليه */
+.toggle-btn:hover {
+color: #0056b3;
+text-decoration: underline;
+transform: scale(1.1); /* تكبير بسيط عند التفاعل */
+}
+
+/* إضافة تأثير متناسق عند الضغط */
+.toggle-btn:active {
+transform: scale(0.95);
+}
+
+/* تحسين عرض زر "عرض المزيد" ليكون متناسقًا */
+.toggle-btn::after {
+content: " ⬇"; /* سهم صغير للإشارة إلى التوسيع */
+font-size: 12px;
+transition: transform 0.3s ease;
+}
+
+/* عند التوسيع، تغيير السهم */
+.text-container.expanded .toggle-btn::after {
+content: " ⬆";
+}

@@ -1,0 +1,212 @@
+* {
+    font-family: 'Tajawal', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f8fa;
+    margin: 0;
+    padding: 0;
+    color: #34495e;
+    background-image: url('../img/background6.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 720px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 15px 40px 20px 40px;
+    text-align: center;
+    max-height: 657px;
+    height: 619px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, #063064, #3e87cc);
+}
+
+.title-h1 {
+    font-size: 36px;
+    color: #07427d;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #34495e;
+    margin-bottom: 10px;
+    display: block;
+    text-align: right;
+}
+
+.form-control {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: all 0.3s ease;
+    min-height: 100px;
+    resize: none;
+    text-align: right;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #2980b9;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(41, 128, 185, 0.2);
+}
+
+.shift-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+.shift-input {
+    width: 65px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+    height: 38px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.button-container button {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+    width: 48%;
+}
+
+.btn-encrypt {
+    background: linear-gradient(to right, #2980b9, #3498db);
+    color: white;
+}
+
+.btn-decrypt {
+    background: linear-gradient(to right, #00aaff, #2980b9);
+    color: white;
+}
+
+.result-container {
+    margin-top: 30px;
+}
+
+.result-container textarea {
+    font-weight: 500;
+    color: #07427d;
+    font-size: 18px;
+    border: 1px solid #2980b9;
+    padding: 14px;
+    min-height: 120px;
+    width: 100%;
+    resize: none;
+    background-color: #eef2f5;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1px;
+}
+
+
+.message-2 {
+padding: 6px 10px;
+font-size: 15px;
+font-weight: 500;
+border-radius: 8px;
+width: fit-content;
+text-align: center;
+margin: 6px auto;
+margin-top: 4px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+display: none;
+opacity: 0;
+transform: translateY(-10px);
+transition: all 0.3s ease;
+}
+
+.message-2.show {
+display: block;
+opacity: 1;
+transform: translateY(0);
+animation: fadeOut 0.5s ease 3s forwards;
+}
+
+.message-2.success {
+background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+color: #ffffff;
+border-left: 4px solid rgba(0, 0, 0, 0.2);
+}
+
+.message-2.error {
+background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+color: #ffffff;
+border-left: 4px solid rgba(0, 0, 0, 0.2);
+}
+
+.message-2 i {
+margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+        height: auto;
+        max-height: none;
+    }
+
+    .shift-input {
+        width: 80px;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button-container button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

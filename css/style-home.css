@@ -1,0 +1,420 @@
+*{
+        font-family: 'Tajawal', 'Cairo', sans-serif; /* خط عربي أنيق */
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    background-image: url('../img/background7.jpg'); /* وضع رابط الصورة هنا */
+    background-size: cover;
+    background-position: center center; /* لضبط الصورة في المنتصف */
+}
+
+/* تصميم فاخر مع تأثيرات ثلاثية الأبعاد */
+.hero-container {
+padding: 0 20px;
+perspective: 1000px;
+margin-bottom: 80px;
+}
+
+.hero {
+position: relative;
+background: linear-gradient(135deg, #0a1f38 0%, #0d47a1 100%);
+padding: 70px 30px;
+border-radius: 16px;
+margin: 40px auto;
+max-width: 1000px;
+text-align: center;
+box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+color: #fff;
+overflow: hidden;
+transform-style: preserve-3d;
+animation: fadeInUp 1s ease-out;
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: radial-gradient(circle at 20% 50%, rgba(10, 31, 56, 0.6) 0%, rgba(13, 71, 161, 0.9) 100%);
+z-index: 1;
+}
+
+.hero-shine {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.03) 100%);
+z-index: 2;
+animation: shine 8s infinite;
+}
+
+.hero-background {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 0;
+}
+
+.welcome-heading {
+font-size: 3rem;
+font-weight: 700;
+margin-bottom: 30px;
+text-align: center;
+line-height: 1.3;
+position: relative;
+z-index: 3;
+text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+animation: slideInFromTop 0.8s ease-out;
+}
+
+.brand-name {
+color: #4fc3f7;
+font-weight: 800;
+position: relative;
+display: inline-block;
+text-shadow: 0 0 20px rgba(79, 195, 247, 0.5);
+}
+
+.username {
+color: #a5dff9;
+font-weight: 600;
+display: inline-block;
+}
+
+.hero-content {
+position: relative;
+z-index: 3;
+margin: 0 auto;
+max-width: 800px;
+}
+
+.hero-description {
+font-size: 1.4rem;
+color: rgba(255, 255, 255, 0.95);
+margin-top: 25px;
+line-height: 1.8;
+padding: 30px;
+border-radius: 12px;
+font-weight: 400;
+animation: fadeInUp 1.2s ease-in-out;
+background-color: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.15);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.description-text {
+font-size: 1.2rem;
+color: rgba(255, 255, 255, 0.9);
+margin-top: 30px;
+font-weight: 400;
+line-height: 1.8;
+padding: 30px;
+background-color: rgba(0, 0, 0, 0.15);
+border-radius: 12px;
+animation: fadeInUp 1.5s ease-in-out;
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.1);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* تأثيرات الحركة */
+@keyframes slideInFromTop {
+from {
+opacity: 0;
+transform: translateY(-60px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(40px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes shine {
+0% { transform: translateX(-100%) rotate(45deg); }
+20% { transform: translateX(100%) rotate(45deg); }
+100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* تأثيرات إضافية للشاشات الكبيرة */
+@media (min-width: 992px) {
+.hero {
+padding: 100px 50px;
+}
+
+.welcome-heading {
+font-size: 3.5rem;
+}
+
+.hero-description {
+font-size: 1.5rem;
+}
+
+.description-text {
+font-size: 1.3rem;
+}
+}
+
+/* عنوان كلمة خدماتنا */
+
+.title-container {
+width: auto;
+margin: 0 auto;
+padding: 5px 30px;
+text-align: center;
+position: relative;
+}
+
+.main-title {
+font-size: 38px;
+color: #ffffff;
+background-color: #1d518bf2; 
+display: inline-block;
+padding: 10px 30px;
+border-radius: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+text-transform: uppercase;
+position: relative;
+width: 350px;
+}
+
+.main-title::before,
+.main-title::after {
+content: '';
+position: absolute;
+top: 50%;
+width: 20px;
+height: 20px;
+background-color:rgb(235 191 0);
+border-radius: 50%;
+transform: translateY(-50%);
+}
+
+.main-title::before {
+left: -30px;
+}
+
+.main-title::after {
+right: -30px;
+}
+
+/***/
+
+.service-header h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #07427d;
+    margin: 30px 0 26px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #07427d;
+}
+
+
+.service-header h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #07427d;
+    left: 25%;
+    bottom: -10px;
+    opacity: 0.3;
+    transition: width 0.3s ease;
+}
+
+.carousel-button.left {
+    left: 20px;
+}
+
+.carousel-button.right {
+    right: 20px;
+}
+.title-h2 {
+    font-size: 2.5em;
+    color: #2980b9;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    text-align: center;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background-color: #ecf0f1;
+}
+
+.service-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.1);
+}
+
+.service-card h3 {
+    font-size: 24px;
+    color: #2980b9;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* التخصيصات لكل بطاقة */
+.service-card:nth-child(1) {
+    border-left: 6px solid #e74c3c;
+}
+
+.service-card:nth-child(2) {
+    border-left: 6px solid #f39c12;
+}
+
+.service-card:nth-child(3) {
+    border-left: 6px solid #8e44ad;
+}
+
+.service-card:nth-child(4) {
+    border-left: 6px solid #2ecc71;
+}
+
+.service-card:nth-child(5) {
+    border-left: 6px solid #3498db;
+}
+
+.service-card:nth-child(6) {
+    border-left: 6px solid #f1c40f;
+}
+
+.service-card:hover {
+    border-left-width: 8px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .service-card {
+        width: 200px;
+    }
+
+    .cta h2 {
+        font-size: 2rem;
+    }
+}
+/* إزالة الخط السفلي من العناوين */
+h3, p {
+text-decoration: none; /* إلغاء الخط السفلي */
+}
+
+/* التأكد من أن الروابط لا تحتوي على خط سفلي */
+a {
+text-decoration: none;
+}
+
+
+/* تصميم عنوان "التشفير" */
+
+.service-category {
+text-align: center; /* للتوسيط الأفقي للنص */
+margin-top: 20px;
+margin: 0;
+}
+.service-category .tit {
+font-size: 30px;
+font-weight: 700;
+color: #07427d;
+margin: 30px auto 26px; /* لتوسيط العنصر بالكامل */
+text-transform: uppercase;
+position: relative;
+display: block; /* التأكد من أن h2 يتصرف كعنصر بلوك لتوسيطه بشكل صحيح */
+padding-bottom: 10px;
+width: fit-content; /* لضبط العرض بحيث يتناسب مع محتوى النص */
+border-bottom: 3px solid #07427d;
+margin: 0 auto;
+}
+
+.service-category .tit::after {
+content: '';
+position: absolute;
+width: 50%;
+height: 2px;
+background-color: #07427d;
+left: 50%; /* تعديل القيمة لتوسيط الخط */
+bottom: -10px;
+transform: translateX(-50%); /* استخدام transform للتوسيط بشكل دقيق */
+opacity: 0.3;
+transition: width 0.3s ease;
+}
+
+/* تصميم الفوتر */
+footer {
+    background: linear-gradient(135deg, #052d5f 0%, #0a5aa6 100%);
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: auto; /* هذا سيجعل الفوتر يبقى في الأسفل */
+} 
+.para-footer{
+padding: 0;
+margin: 0;
+}

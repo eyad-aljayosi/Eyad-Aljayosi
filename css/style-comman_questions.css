@@ -1,0 +1,167 @@
+*{
+    font-family: 'Tajawal', 'Cairo', sans-serif;
+}
+        body {
+            background-color: #f7f8fa;
+            background-image: url('../img/background7.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            color: #34495e;
+        }
+
+        .container {
+            padding: 20px 40px 50px;
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: rgba(255, 255, 255, 0.97);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(0, 123, 255, 0.2);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #052d5f;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, #007bff, #007bff00);
+            border-radius: 2px;
+        }
+
+
+
+        .accordion-container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .accordion {
+            background-color: #fff;
+            color: #052d5f;
+            cursor: pointer;
+            padding: 20px 25px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            text-align: right;
+            outline: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .accordion::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background-color: #007bff;
+            transition: all 0.3s ease;
+        }
+
+        .accordion:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .accordion:hover::before {
+            width: 8px;
+        }
+
+        .accordion.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .accordion-icon {
+            font-size: 1.3rem;
+            transition: transform 0.3s ease;
+            margin-left: 15px;
+            color: #007bff;
+        }
+
+        .accordion.active .accordion-icon {
+            color: #fff;
+            transform: rotate(180deg);
+        }
+
+        .panel {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            border-radius: 0 0 10px 10px;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .panel-content {
+            padding: 25px;
+        }
+
+        .panel p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+
+        .category-title {
+            font-size: 1.5rem;
+            color: #0a5aa6;
+            margin: 40px 0 20px;
+            padding-right: 15px;
+            border-right: 4px solid #f7b731;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px 20px;
+                margin: 20px 10px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+            
+            .accordion {
+                padding: 15px 20px;
+                font-size: 1.1rem;
+            }
+            
+            .panel-content {
+                padding: 20px;
+            }
+            
+            .panel p {
+                font-size: 1rem;
+            }
+        }

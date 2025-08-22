@@ -1,0 +1,201 @@
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/background7.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+
+}
+
+.contact-wrapper {
+    margin-top: 20px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.96);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px 30px 30px 30px;
+    border: 1px solid rgba(0, 123, 255, 0.15);
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.contact-header h1 {
+    color: #052d5f;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.contact-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #f7b731, #f7b73100);
+    border-radius: 2px;
+}
+
+.contact-header p {
+    color: #555;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contact-header p span {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.alert {
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.15);
+    color: #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.alert-error {
+    background-color: rgba(220, 53, 69, 0.15);
+    color: #dc3545;
+    border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+#contact-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+
+/* أيقونات الحقول العادية */
+.form-group i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #0a559e;
+    font-size: 1rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: 'Tajawal', sans-serif;
+    transition: all 0.2s ease;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+    background-color: #fff;
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: none;
+    padding: 15px 15px 15px 45px;
+}
+
+/* أيقونة حقل الرسالة */
+textarea.form-control + i {
+    top: 66px;
+    left: 15px;
+    transform: none;
+}
+.form-group i.fa-comment-alt{
+     top: 25px !important;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to left, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Tajawal', sans-serif;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(to left, #0069d9, #004a9f);
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.contact-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 576px) {
+    .contact-container {
+        padding: 25px 20px;
+    }
+    
+    .contact-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .form-control {
+        padding: 10px 15px 10px 40px;
+        font-size: 0.9rem;
+    }
+    
+    .form-group i {
+        left: 12px;
+        font-size: 0.9rem;
+    }
+    
+    textarea.form-control + i {
+        top: 15px;
+        left: 12px;
+    }
+}

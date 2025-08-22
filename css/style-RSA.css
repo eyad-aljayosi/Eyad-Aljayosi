@@ -1,0 +1,205 @@
+*{
+    font-family: 'Tajawal', 'Cairo', sans-serif;
+}
+body {
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+
+    background-image: url('../img/background6.jpg');
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed;
+}
+
+.container {
+    width: 840%;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+border-radius: 12px;
+position: relative;
+}
+
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7px;
+    background: linear-gradient(90deg, #063064, #3e87cc); 
+    }
+
+
+.title {
+    text-align: center;
+    color: #07427d;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    font-size: 34px;
+}
+
+.btn-generate {
+    display: block;
+    width: 25%;
+    padding: 15px;
+    background-color: #094e94;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 auto 8px auto;  /* توسيط العنصر أفقيًا */
+
+}
+
+.btn-generate:hover {
+    background-color:rgb(39, 105, 198);
+
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 27px;
+    padding: 20px 20px 5px 20px; 
+    max-width: 10000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.key-section,
+.encryption-section {
+    width: 48%;
+    background-color: #ffffff;
+    padding: 8px 25px 25px 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.key-section h3,
+.encryption-section h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 20px;
+}
+
+.key-section textarea,
+.encryption-section textarea {
+    width: -webkit-fill-available;
+    height: 150px;
+    padding: 12px;
+    max-height: 100px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    resize: none;
+    background-color: #f7f7f7;
+}
+
+.key-section button,
+.encryption-section button {
+    background: linear-gradient(to right, #2980b9, #3498db);
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.key-section button:hover,
+.encryption-section button:hover {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.btn-copy {
+    background: linear-gradient(to right, #00aaff, #2980b9);
+    color: white;
+    margin-bottom: 20px;
+}
+
+.btn-copy:hover {
+    background: linear-gradient(to right, #2980b9, #00aaff);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.error-msg {
+    color: #f44336;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .key-section,
+    .encryption-section {
+        width: 100%;
+    }
+}
+
+
+.message {
+    padding: 10px 17px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    width: fit-content;
+    text-align: center;
+    margin: 10px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.message.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeOut 0.5s ease 3s forwards;
+}
+
+.message.success {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    color: #ffffff;
+    border-left: 4px solid rgba(0, 0, 0, 0.2);
+}
+
+
+.message.error {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: #ffffff;
+    border-left: 4px solid rgba(0, 0, 0, 0.2);
+}
+
+.message i {
+    margin-left: 8px;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+        display: none;
+    }
+}
